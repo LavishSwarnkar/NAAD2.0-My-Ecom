@@ -1,14 +1,52 @@
 package com.streamliners.myecom;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
 
+import com.streamliners.myecom.controllers.AdapterCallbacksListener;
+import com.streamliners.myecom.controllers.ProductsAdapter;
+import com.streamliners.myecom.databinding.ActivityMainBinding;
+import com.streamliners.myecom.models.Cart;
+import com.streamliners.myecom.tmp.ProductsHelper;
+
 public class MainActivity extends AppCompatActivity {
+
+    private ActivityMainBinding b;
+    private ProductsAdapter adapter;
+    private Cart cart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        b = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(b.getRoot());
+
+        setupAdapter();
+    }
+
+    private void setupAdapter() {
+        AdapterCallbacksListener listener = new AdapterCallbacksListener() {
+            @Override
+            public void onCartUpdated(int itemPosition) {
+                updateCartSummary();
+                adapter.notifyItemChanged(itemPosition);
+            }
+        };
+
+        adapter = new ProductsAdapter(this
+                , ProductsHelper.getProducts()
+                , cart
+                , listener);
+
+        b.list.setLayoutManager(new LinearLayoutManager(this));
+
+        b.list.setAdapter(adapter);
+    }
+
+    private void updateCartSummary() {
+
     }
 }
