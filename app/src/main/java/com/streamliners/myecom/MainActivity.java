@@ -5,6 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.gson.Gson;
 import com.streamliners.myecom.controllers.AdapterCallbacksListener;
 import com.streamliners.myecom.controllers.ProductsAdapter;
 import com.streamliners.myecom.databinding.ActivityMainBinding;
@@ -24,7 +28,19 @@ public class MainActivity extends AppCompatActivity {
         b = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
 
-        setupAdapter();
+        showUserDetails();
+
+        //setupAdapter();
+    }
+
+    private void showUserDetails() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null){
+            new MaterialAlertDialogBuilder(this)
+                    .setTitle("Login successful!")
+                    .setMessage(new Gson().toJson(user))
+                    .show();
+        }
     }
 
     private void setupAdapter() {
