@@ -1,2 +1,3 @@
+include ':admin-app'
 include ':app'
 rootProject.name = "My Ecom"
