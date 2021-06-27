@@ -11,7 +11,7 @@ public class CartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
-        //TODO 4 : Handle "Place new order"
+        //TODO 1.4 : Handle "Place new order"
 
         /* 1.1 Create order object and save it in "orders" collection
          * 1.2 Notify the Admin using FCMSender

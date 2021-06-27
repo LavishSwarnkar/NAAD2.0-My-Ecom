@@ -40,7 +40,7 @@ public class OrdersHelper {
      * Fetches orders & sets a snapshotListener for listening to changes
      */
     public void fetchOrders(){
-        //TODO 5 : Set snapshotListener on "orders" collection
+        //TODO 1.5 : Set snapshotListener on "orders" collection
 
         //Note : orderBy(timestamp, DESC) && userPhoneNo ==user.phoneNo
 

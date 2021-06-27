@@ -40,7 +40,7 @@ public class OrdersHelper {
      * Fetches orders & sets a snapshotListener for listening to changes
      */
     public void fetchOrders(){
-        //TODO 4 : Set snapshotListener on "orders" collection
+        //TODO 2.3 : Set snapshotListener on "orders" collection
 
         /* Set listener on orders collection where date==today,
                 if new order received, call onNewOrderReceived(orderId, order);

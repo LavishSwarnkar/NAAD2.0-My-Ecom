@@ -11,6 +11,6 @@ public class OrdersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orders);
 
-        //TODO 6 : Use OrdersHelper to fetch orders and setup ordersAdapter
+        //TODO 1.6 : Use OrdersHelper to fetch orders and setup ordersAdapter
     }
 }

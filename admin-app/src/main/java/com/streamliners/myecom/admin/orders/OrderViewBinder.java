@@ -9,7 +9,13 @@ import com.streamliners.myecom.models.Order;
 public class OrderViewBinder {
 
     public void bind(ItemOrderBinding b, Order order){
-        //TODO 3 : Bind the order data with its views
+        //TODO 2.2 : Bind the order data with its views
+
+        /* Note :
+         * When order status is updated, update the order on Firestore & notify the User
+         *      - Use the FCMSender used in User app
+         *      - Make sure to implement FCMReceiverService in User app
+         */
     }
 
 }

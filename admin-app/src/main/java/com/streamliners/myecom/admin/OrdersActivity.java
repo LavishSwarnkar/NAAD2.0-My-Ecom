@@ -49,7 +49,7 @@ public class OrdersActivity extends AppCompatActivity {
     }
 
     private void setupOrdersAdapter() {
-        //TODO 5 : Setup the OrdersAdapter
+        //TODO 2.4 : Setup the OrdersAdapter
     }
 
 }

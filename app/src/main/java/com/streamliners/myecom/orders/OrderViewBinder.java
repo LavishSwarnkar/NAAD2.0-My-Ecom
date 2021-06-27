@@ -9,7 +9,11 @@ import com.streamliners.myecom.models.Order;
 public class OrderViewBinder {
 
     public void bind(ItemOrderBinding b, Order order){
-        //TODO 3 : Bind the order data with its views
+        //TODO 1.3 : Bind the order data with its views
+
+        /* Note :
+         * When order is cancelled, update the order on Firestore & notify the Admin
+         */
     }
 
 }
