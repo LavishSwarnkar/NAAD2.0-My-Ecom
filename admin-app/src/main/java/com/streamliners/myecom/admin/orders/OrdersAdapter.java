@@ -9,6 +9,9 @@ import com.streamliners.myecom.models.Order;
 
 import java.util.List;
 
+/**
+ * Adapter class for RecyclerView to show List of Orders
+ */
 public class OrdersAdapter extends RecyclerView.Adapter<OrderViewHolder> {
 
     private OrderViewBinder binder;
@@ -35,6 +38,6 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrderViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return orders.size();
     }
 }
