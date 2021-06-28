@@ -24,7 +24,7 @@ public class OrdersHelper {
      * Initialize variables
      * @param listener needed to communicate with OrdersActivity
      */
-    public void init(OrdersCallbacksListener listener){
+    public OrdersHelper(OrdersCallbacksListener listener){
         this.listener = listener;
 
         //Data

@@ -27,8 +27,7 @@ public class OrdersActivity extends AppCompatActivity {
     }
 
     private void setupOrdersHelper() {
-        ordersHelper = new OrdersHelper();
-        ordersHelper.init(new OrdersCallbacksListener() {
+        ordersHelper = new OrdersHelper(new OrdersCallbacksListener() {
 
             @Override
             public void onNewOrderReceived(int position) {
